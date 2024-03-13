@@ -11,6 +11,10 @@ app.use(express.json())
 
 app.use("/", formDataRouter)
 
+app.get("/", (_, res) => {
+  res.send("API is ready for work 💻")
+})
+
 app.use((_, res) => {
   res.status(404).send("Not Found 🤷‍♂")
 })
